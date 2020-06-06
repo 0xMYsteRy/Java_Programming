@@ -20,10 +20,10 @@ public class ComputeLoan {
 
         // Calculate payment
         double monthlyPayment = (loanAmount * monthlyInterestRate / (1 - 1 / Math.pow(1 + monthlyInterestRate, numberOFYears * 12)));
-        monthlyPayment = (int)monthlyPayment * 100 / 100.0;
+        double totalPayment = (monthlyPayment * 12 * numberOFYears);
 
-        double totalPayment = (int)(monthlyPayment * 12);
-        totalPayment = totalPayment * 100 / 100.0;
+        monthlyPayment = (int)(monthlyPayment * 100) / 100.0;
+        totalPayment = (int)(totalPayment * 100) / 100.0;
 
         //Display the result message
         String result = "The monthly payment is: " + monthlyPayment + "\nThe total payment is: " + totalPayment;
