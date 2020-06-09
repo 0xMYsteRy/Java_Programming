@@ -7,7 +7,7 @@ public class SentinelValue {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print(
+        System.out.println(
                 "Enter an integer (the input ends if it is 0): ");
         int data = input.nextInt();
 
@@ -15,10 +15,12 @@ public class SentinelValue {
         while (data != 0) {
             sum += data;
 
-            System.out.print(
-                    "Enter an integer (the input ends if it is 0): ");
+//            System.out.print(
+//                    "Enter an integer (the input ends if it is 0): ");
             data = input.nextInt(); }
         System.out.println("The sum is " + sum);
-
     }
 }
+
+// Get the ouput on terminal by;
+// java SentinelValue.java < input.txt -o output.txt
