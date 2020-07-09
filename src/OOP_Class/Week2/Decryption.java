@@ -25,10 +25,11 @@ public class Decryption {
                 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y', 'Z',
                 'q', 't', 'g', 'a', 'b', 'c', 'd', 'e', 'f', 'h',
                 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z'};
+
         for (int i = 0; i < str.length(); i++) {
 
             //Print the space
-            if (str.charAt(i) == 32) {
+            if (str.charAt(i) == ' ') {
                 System.out.print(" ");
             }
 
@@ -40,5 +41,6 @@ public class Decryption {
             }
             //Dmma aqy
         }
+        System.out.println();
     }
 }
