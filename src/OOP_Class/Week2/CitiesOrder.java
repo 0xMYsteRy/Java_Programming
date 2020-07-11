@@ -19,7 +19,7 @@ public class CitiesOrder {
         System.out.println("Enter the third city: ");
         String city3 = input.nextLine();
 
-        ArrayList<String> Cities = new ArrayList<String>();
+        ArrayList<String> Cities = new ArrayList<>();
         Cities.add(city1);
         Cities.add(city2);
         Cities.add(city3);
