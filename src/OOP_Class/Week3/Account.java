@@ -37,29 +37,109 @@ class Account {
     private double annualInterestRate;
     Date dateCreated = new Date();
 
-    //A no-arg constructor that creates a default account.
-    Account (){
+
+    // A no-arg constructor that creates a default account.
+    Account() {
         id = 0;
         balance = 0;
         annualInterestRate = 0;
         dateCreated.getTime();
     }
 
+
     // A constructor that creates an account with the specified id and initial balance.
-    Account (int id_num, double balance_num, double annualInterestRate_num){
-        id = this.id;
-        balance = this.balance;
-        annualInterestRate_num = this.annualInterestRate;
+    Account(int id_num, double balance_num, double annualInterestRate_num) {
+        this();
+        this.id = id_num;
+        this.balance = balance_num;
+        this.annualInterestRate = annualInterestRate_num;
         dateCreated.getTime();
     }
 
 
+    // The accessor (get) and mutator (set) methods for id, balance, and annualInterestRate.
+    // Get method
+    public int getID() {
+        return this.id;
+    }
+
+
+    public double getBalance() {
+        return this.balance;
+    }
+
+
+    public double getAnnualInterestRate() {
+        return this.getAnnualInterestRate();
+    }
+
+
+    // Set method
+    // The this. method refer to the value in the declare field.
+    //        private int id;
+    //        private double balance;
+    //        private double annualInterestRate;
+    public int setID(int id) {
+        return this.id = id;
+    }
+
+
+    public double setBalance(double balance) {
+        return this.balance = balance;
+    }
+
+
+    public double setAnnualInterestRate(double annualInterestRate) {
+        return this.annualInterestRate = annualInterestRate;
+    }
+
+
+    // The accessor method for dateCreated.
+    public Date getDateCreated() {
+        return dateCreated;
+    }
+
+
+    // A method named getMonthlyInterestRate() that returns the monthly interest rate.
+    private double getMonthlyInterestRate() {
+        return (annualInterestRate / 100) / 12;
+    }
+
+
+    // A method named getMonthlyInterest() that returns the monthly interest.
+    private double getMonthlyInterest() {
+        return balance * getMonthlyInterestRate();
+    }
+
+
+    // A method named withdraw that withdraws a specified amount from the account.
+    public double withDraw(double amount) {
+        return this.balance -= amount;
+    }
+
+
+    // A method named deposit that deposits a specified amount to the account.
+    public double deposit(double amount) {
+        return this.balance += amount;
+    }
 }
-class AccountTest{
+
+class AccountTest {
     public static void main(String[] args) {
 
         //Testing
         Account Account1 = new Account();
         System.out.println(Account1.dateCreated);
+        System.out.println("-----*****-----");
+
+        // Create an account ID of 1122,
+        // with initial a balance of $20,000, and an annual interest rate of 4.5%.
+        // Use the withdraw method to withdraw $2,500,
+        Account Account1122 = new Account(1122, 20000, 4.5);
+        System.out.printf("Initial account balance is : %1.2f\n", Account1122.getBalance());
+        Account1122.withDraw(2000);
+        System.out.printf("After withdraw the balance is: %1.2f", Account1122.getBalance());
+
+        
     }
 }
