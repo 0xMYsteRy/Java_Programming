@@ -1,2 +1,0 @@
-sum is 14
-count is 5
