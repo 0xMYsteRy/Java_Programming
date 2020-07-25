@@ -1,0 +1,29 @@
+package Coding_Interview.Sort;
+
+class BubbleSort {
+    public static int[] BubbleSort(int arr[]){
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j =0; j < arr.length-1-i;j++){
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+}
+class BubbleSortTest{
+    public static void main(String[] args) {
+        BubbleSort BubbleSort = new BubbleSort();
+        int arr[] = {100,200,35,23,7,45,18};
+
+        BubbleSort.BubbleSort(arr);
+
+
+        for (int value: arr) {
+            System.out.println(value);
+        }
+    }
+}
