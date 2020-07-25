@@ -166,6 +166,11 @@ public class IncomeTax {
 
         return tax;
     }
+
+
+    public void showTax(){
+
+    }
 }
 
 class IncomeTaxTest {
