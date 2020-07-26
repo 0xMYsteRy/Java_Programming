@@ -1,5 +1,12 @@
 package Coding_Interview.Sort;
 
+/*
+1.Set a marker for the sorted section after the first element
+2.Repeat the following until unsorted section is empty
+    - Selection the first unsorted element
+    - Swap other elements to the right to create the correct postion and shift the correct element.
+    - Advance the marker to the right element.
+ */
 public class InsertionSort {
 
     public int[] insertionSort(int arr[])

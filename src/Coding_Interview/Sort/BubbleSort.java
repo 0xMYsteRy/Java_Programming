@@ -1,5 +1,9 @@
 package Coding_Interview.Sort;
 
+/*
+1.Compare the adjacent element
+3.Swap them
+ */
 class BubbleSort {
     public static int[] BubbleSort(int arr[]){
         for (int i = 0; i <arr.length ; i++) {
