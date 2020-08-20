@@ -2,7 +2,7 @@
   <configuration default="false" name="MultipleStageDemo" type="Application" factoryName="Application" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="GUI_Programming.Chapter14.MultipleStageDemo" />
     <module name="Java" />
-    <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-14.0.2.1/lib --add-modules javafx.controls,javafx.fxml" />
+    <option name="VM_PARAMETERS" value="// --module-path $USER_HOME$/Downloads/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="GUI_Programming.Chapter14.*" />
